@@ -1,7 +1,7 @@
 config INPUT_TOUCHSCREEN_MMI
 	tristate "Moto touchscreen gestures"
-	depends on SENSORS_CLASS && MMI_RELAY
 	default n
+	depends on MMI_RELAY
 	help
 	 Say Y here if you wish to include support for Moto touchscreen gestures.
 	 If unsure, say N.
@@ -41,6 +41,20 @@ config DRM_PANEL_EVENT_NOTIFICATIONS
 	default n
 	help
 	 Say Y here if your panel includes support for drm panel event notifications.
+	 If unsure, say N.
+
+config TOUCH_PANEL_NOTIFICATIONS
+	bool "Moto touch panel notifications"
+	default n
+	help
+	 Say Y here if your panel includes support for touch panel notifications.
+	 If unsure, say N.
+
+config BOARD_USES_DOUBLE_TAP_CTRL
+	bool "Moto board uses double tap ctrl"
+	default n
+	help
+	 Say Y here if your panel includes support for double tap ctrl.
 	 If unsure, say N.
 
 endif
